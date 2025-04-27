@@ -1,0 +1,327 @@
+/* GENERAL */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f4f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER Y FOOTER */
+.bg-header,
+.bg-footer {
+    background-color: #4a47a3;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* MAIN para empujar el footer */
+main {
+    flex: 1 0 auto;
+}
+
+/* TITULOS */
+.titulo-principal {
+    color: #4a47a3;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #6c757d;
+}
+
+/* NAVBAR */
+.navbar-brand {
+    white-space: normal;
+    word-break: break-word;
+    font-size: 1.5rem;
+}
+
+.navbar-nav {
+    flex-wrap: nowrap !important;
+}
+
+.nav-link {
+    white-space: nowrap !important;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    text-decoration: none;
+    color: #ffd700 !important;
+}
+
+/* MENÚ HAMBURGUESA */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* TABLA */
+.sombra-tabla {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    width: 100%;
+    table-layout: auto;
+    /* Dejamos que el contenido acomode la tabla */
+}
+
+thead th {
+    background-color: #e5e0f7 !important;
+    color: #4a47a3 !important;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* Anchos de columnas */
+thead th:nth-child(1),
+tbody td:nth-child(1) {
+    width: 50%;
+}
+
+thead th:nth-child(2),
+tbody td:nth-child(2),
+thead th:nth-child(3),
+tbody td:nth-child(3) {
+    width: 20%;
+}
+
+/* Hover en filas */
+.table-hover tbody tr:hover {
+    background-color: #f0eaff;
+    transition: background-color 0.3s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    .titulo-principal {
+        font-size: 1.5rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* FOTO + NOMBRE + EPIGRAFE */
+.perfil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.foto-perfil {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.nombre-principal {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #4a47a3;
+    margin-bottom: 0.5rem;
+}
+
+
+.epigrafe-perfil {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* RESPONSIVE: oculto epígrafe en mobile */
+@media (max-width: 576px) {
+    .epigrafe-perfil {
+        display: none;
+    }
+}
+
+/* CARDS DE SECCIONES */
+.sombra-seccion {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+/* SUBTITULOS DE CADA SECCION */
+.subtitulo-seccion {
+    color: #4a47a3;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.titulo-materia {
+    color: #4a47a3;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.card {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0.75rem;
+}
+
+ul.list-unstyled li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+    .titulo-principal {
+        font-size: 1.6rem;
+    }
+
+    .titulo-materia {
+        font-size: 1.2rem;
+    }
+}
+
+/* AVISOS - Cards organizadas */
+.grid-avisos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .grid-avisos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.titulo-materia-card {
+    background-color: #e5e0f7;
+    color: #4a47a3;
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 0.8rem 1rem;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+
+.card-aviso {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+}
+
+.card-aviso:hover {
+    transform: translateY(-6px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-aviso .titulo-materia {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4a47a3;
+    margin-bottom: 1.2rem;
+}
+
+.card-aviso ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.card-aviso li {
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+}
+
+/* MATERIAS 2025 - TABLA */
+.bg-light-purple {
+    background-color: #e5e0f7;
+    /* Lila */
+}
+
+.link-materia {
+    color: #4a47a3;
+    /* Violeta principal */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.link-materia:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+/* FORM CONTACTO*/
+
+/* Fondo de la tarjeta */
+.card-formulario {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    background-color: #e5e0f7;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* Inputs */
+.form-control {
+    border-radius: 0.75rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #4a47a3;
+    box-shadow: 0 0 5px rgba(74, 71, 163, 0.4);
+}
+
+/* Botón */
+.btn-custom {
+    background-color: #4a47a3;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.7rem 2.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0.75rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #39367c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(74, 71, 163, 0.3);
+    color: #fff;
+}

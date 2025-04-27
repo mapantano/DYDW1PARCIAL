@@ -1,75 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mi</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sobre mí | Mi Cursada 2025</title>
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet">
+        <!-- Estilos Propios -->
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body class="d-flex flex-column min-vh-100">
 
-</head>
-<body class="d-flex flex-column min-vh-100 bg-light">
-    <!-- Header con Barra de navegación -->
-
-       <header class="bg-primary text-white p-3">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Home</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="avisos.html">Avisos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre mí</a></li>
-                        <li class="nav-item"><a class="nav-link" href="materias2025.html">Materias 2025</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <!-- NAVBAR -->
+        <header class="bg-header p-3">
+            <nav class="navbar navbar-expand-lg navbar-dark container">
+                <div class="d-flex w-100 align-items-center">
+                    <a class="navbar-brand fw-bold text-white"
+                        href="index.html">
+                        Ma. Alejandra Pantano | Mi Cursada 2025
+                    </a>
+                    <button class="navbar-toggler ms-auto" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end"
+                    id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link text-white"
+                                href="avisos.html">Avisos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white"
+                                href="sobremi.html">Sobre mí</a></li>
+                        <li class="nav-item"><a class="nav-link text-white"
+                                href="materias2025.html">Materias 2025</a></li>
+                        <li class="nav-item"><a class="nav-link text-white"
+                                href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main class="container my-5 flex-grow-1">
+
+            <!-- Encabezado con foto + nombre + epígrafe -->
+            <div
+                class="container d-flex flex-column align-items-center justify-content-center my-5">
+                <div
+                    class="d-flex align-items-center flex-column flex-md-row text-center text-md-start">
+                    <img src="./img/foto perfil CV.jpg" alt="Foto personal"
+                        class="foto-perfil me-md-4 mb-3 mb-md-0">
+                    <div>
+                        <h1 class="nombre-principal">María Alejandra
+                            Pantano</h1>
+                        <p class="epigrafe-perfil">Apasionada por la tecnología,
+                            la calidad y el aprendizaje constante.</p>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </header>
-    
-        <!-- Contenido principal - Main-->
 
-    <main class="container my-4 flex-grow-1">
-
-    <div class="container mt-4">
-        <!-- Sección del título y foto -->
-        <div class="row align-items-center">
-            <div class="col-md-8">
-                <h1 class="text-primary">Sobre mí</h1>
+            <!-- Secciones en cards -->
+            <div class="card p-4 mb-4 sombra-seccion">
+                <h2 class="subtitulo-seccion mb-3">Sobre mí</h2>
+                <p>Les doy la bienvenida y paso a contarles un poco sobre mí:
+                    Desde siempre me ha interesado entender cómo funcionan las
+                    cosas a mi alrededor. Crecí rodeada de libros, tecnología y
+                    desafíos que me motivaron a aprender y a superar mis propios
+                    límites. Cada experiencia me ha llevado a descubrir mis
+                    fortalezas y a desarrollar habilidades que hoy definen mi
+                    camino profesional.</p>
             </div>
-            <div class="col-md-4 text-end">
-                <img src="./foto perfil CV.jpg" alt="Foto personal" class="img-fluid rounded-circle" style="width: 150px;">
+
+            <div class="card p-4 mb-4 sombra-seccion">
+                <h2 class="subtitulo-seccion mb-3">Intereses y
+                    Conocimientos</h2>
+                <ul>
+                    <li>Tecnología y calidad en los procesos</li>
+                    <li>Quality Assurance</li>
+                    <li>Resolución de problemas</li>
+                </ul>
             </div>
-        </div>
 
-        <div class="card mt-4 p-3 mb-4">
-            <h2 class="text-secondary">Maria Alejandra Pantano</h2>
-        </div>
-    <p>Les doy la bienvenida y paso a contarles un poco sobre mí: Desde siempre me ha interesado entender cómo funcionan las cosas a mi alrededor. Crecí rodeada de libros, tecnología y desafíos que me motivaron a aprender y a superar mis propios límites. Cada experiencia me ha llevado a descubrir mis fortalezas y a desarrollar habilidades que hoy definen mi camino profesional.</p>
+            <div class="card p-4 sombra-seccion">
+                <h2 class="subtitulo-seccion mb-3">Mi Carrera</h2>
+                <p>Elegí estudiar la Licenciatura en Gestión IT porque siempre
+                    me ha fascinado la combinación entre lógica, precisión y
+                    creatividad en el desarrollo de proyectos. Lo que me llevó a
+                    tomar esta decisión fue el deseo de contribuir a la mejora
+                    de procesos y ayudar a equipos a lograr sus objetivos con la
+                    mayor calidad posible.</p>
+                <p>Cada paso en mi camino profesional ha reforzado mi motivación
+                    y me ha enseñado la importancia de la colaboración y el
+                    aprendizaje constante.</p>
+            </div>
 
-    <h2>Intereses y Conocimientos</h2>
-    <ul>
-        <li>Tecnología y calidad en los procesos</li>
-        <li>Quality Assurance</li>
-        <li>Resolución de problemas</li>
-    </ul>
+        </main>
 
-    <p>Me apasionan la tecnología y la calidad en los procesos. Desde hace tiempo, me he dedicado a entender cómo asegurar la eficiencia en los proyectos digitales. También disfruto de la resolución de problemas y la mejora continua en los entornos de trabajo. En mi tiempo libre, me gusta aprender sobre temas financieros y explorar formas de optimizar el rendimiento de sistemas.</p>
+        <!-- FOOTER -->
+        <footer class="bg-footer text-white text-center p-3 mt-auto">
+            <p>Hecho con &#10084; por Maria Alejandra Pantano</p>
+        </footer>
 
-    <h2>Mi Carrera</h2>
-    <p>Elegí estudiar la Licenciatura en Gestión IT porque siempre me ha fascinado la combinación entre lógica, precisión y creatividad en el desarrollo de proyectos. Lo que me llevó a tomar esta decisión fue el deseo de contribuir a la mejora de procesos y ayudar a equipos a lograr sus objetivos con la mayor calidad posible.</p>
+        <!-- Bootstrap JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <p>Cada paso en mi camino profesional ha reforzado mi motivación y me ha enseñado la importancia de la colaboración y el aprendizaje constante.</p>
-    
-</main>
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center p-3 mt-auto">
-        <p>Hecho con &#10084; por Maria Alejandra Pantano</p>
-    </footer>
-<!--Bootstrap JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+    </body>
 </html>
