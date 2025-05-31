@@ -307,6 +307,10 @@ ul.list-unstyled li {
     box-shadow: 0 0 5px rgba(74, 71, 163, 0.4);
 }
 
+#mensaje-formulario p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
 /* Botón */
 .btn-custom {
     background-color: #4a47a3;
@@ -324,4 +328,179 @@ ul.list-unstyled li {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(74, 71, 163, 0.3);
     color: #fff;
+}
+
+/* Modo oscuro o claro*/
+
+/* Modo oscuro: fondo y texto general */
+body.modo-oscuro {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* Subtítulo modo oscuro */
+body.modo-oscuro .subtitulo {
+  color: #cccccc;
+}
+
+/* Tabla en modo oscuro */
+body.modo-oscuro .tabla-cursada {
+  background-color: #1e1e1e;
+  color: #f2f2f2;
+}
+
+body.modo-oscuro .tabla-cursada thead th {
+  background-color: #3a3a5a !important;
+  color: #ffffff !important;
+}
+
+body.modo-oscuro .tabla-cursada tbody tr {
+  border-bottom: 1px solid #444;
+}
+
+body.modo-oscuro .tabla-cursada tbody tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+body.modo-oscuro .tabla-cursada tbody tr:hover {
+  background-color: #333;
+}
+
+/* Cards o secciones con sombra en modo oscuro */
+body.modo-oscuro .sombra-tabla {
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.05);
+}
+/* fondo oscuro en el cuerpo de la tabla */
+body.modo-oscuro .tabla-cursada tbody tr td {
+  background-color: #1e1e1e !important;
+  color: #f2f2f2 !important;
+}
+
+/* Zebra para filas pares */
+body.modo-oscuro .tabla-cursada tbody tr:nth-child(even) td {
+  background-color: #2a2a2a !important;
+}
+
+/* Hover visual */
+body.modo-oscuro .tabla-cursada tbody tr:hover td {
+  background-color: #333 !important;
+}
+
+/* botón modo oscuro*/
+.btn-mode {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7rem;
+  margin-left: 1rem;
+  color: #4a47a3;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-mode:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+body.modo-oscuro .btn-mode {
+  background-color: #39367c;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+body.modo-oscuro .btn-mode:hover {
+  background-color: #4a47a3;
+}
+
+/* Modo oscuro para sección Avisos */
+
+body.modo-oscuro .card-aviso {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.modo-oscuro .titulo-materia-card {
+  background-color: #2a2a4f;
+  color: #ffffff;
+}
+
+body.modo-oscuro .card-aviso li {
+  color: #dddddd;
+}
+
+/* MODO OSCURO pag. CONTACTO */
+
+body.modo-oscuro .card-formulario {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.modo-oscuro .form-label {
+  color: #cccccc;
+}
+
+body.modo-oscuro .form-control {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+body.modo-oscuro .form-control::placeholder {
+  color: #aaaaaa;
+}
+
+body.modo-oscuro .form-control:focus {
+  background-color: #2a2a2a;
+  border-color: #8a85ff;
+  box-shadow: 0 0 6px rgba(138, 133, 255, 0.5);
+}
+
+/* Modo oscuro: tabla materias2025 */
+
+body.modo-oscuro .bg-light-purple {
+  background-color: #3a3a5a !important;
+  color: #ffffff !important;
+}
+
+body.modo-oscuro .sombra-tabla table {
+  background-color: #1e1e1e;
+  color: #f2f2f2;
+}
+
+body.modo-oscuro .sombra-tabla td {
+  border-color: #444;
+}
+
+body.modo-oscuro .sombra-tabla tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+/* Modo oscuro para SOBRE MÍ */
+
+/* Fondo de las cards */
+body.modo-oscuro .sombra-seccion {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Títulos dentro de las secciones */
+body.modo-oscuro .subtitulo-seccion {
+  color: #c9bfff;
+}
+
+/* Nombre principal */
+body.modo-oscuro .nombre-principal {
+  color: #c9bfff;
+}
+
+/* Epígrafe */
+body.modo-oscuro .epigrafe-perfil {
+  color: #bbbbbb;
+}
+
+/* Bullets de lista */
+body.modo-oscuro li {
+  color: #eaeaea;
 }

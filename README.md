@@ -84,4 +84,5 @@ Separación de responsabilidades: estructura (HTML) vs. estilos (CSS)
 
 ✨ Autora
 María Alejandra Pantano
+
 Proyecto personal para reflejar mi recorrido académico de la materia Diseño y Desarrollo Web durante el primer bimestre correspondiente al primer cuatrimestre del 2025.
