@@ -1,38 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const formulario = document.querySelector("form");
-  const mensajeDiv = document.getElementById("mensaje-formulario");
+  const formulario = document.getElementById("formulario-contacto");
+  const campos = ["nombre", "email", "asunto", "mensaje"];
+
 
   formulario.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const asunto = document.getElementById("asunto").value.trim();
-    const mensaje = document.getElementById("mensaje").value.trim();
+    // Limpiar errores previos
+    campos.forEach((id) =>
+      document.getElementById(id).classList.remove("is-invalid")
+    );
 
-    // Reset mensaje
-    mensajeDiv.innerHTML = "";
+    const errores = [];
+    const datos = {};
 
-    // Validación de compos completos
-    if (!nombre || !email || !asunto || !mensaje) {
-      mensajeDiv.innerHTML =
-        '<p class="text-danger">Por favor completá todos los campos</p>';
+    campos.forEach((campo) => {
+      const valor = document.getElementById(campo).value.trim();
+      datos[campo] = valor;
+
+      if (!valor) {
+        errores.push(
+          `El campo <strong>${capitalizar(campo)}</strong> es obligatorio`
+        );
+        document.getElementById(campo).classList.add("is-invalid");
+      }
+    });
+
+    // Validación extra de email
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(datos.email);
+    if (datos.email && !emailValido) {
+      errores.push("Ingresá un <strong>correo electrónico válido</strong>");
+      document.getElementById("email").classList.add("is-invalid");
+    }
+
+    if (errores.length > 0) {
+      mostrarErrores(errores);
       return;
     }
 
-    // Validación formato de email
-    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!emailValido) {
-      mensajeDiv.innerHTML =
-        '<p class="text-danger">Ingresá un correo electrónico válido</p>';
-      return;
-    }
-
-    // Mensaje de éxito
-    mensajeDiv.innerHTML =
-      `<p class="text-success">Gracias por tu mensaje, <strong>${nombre}</strong>. Pronto te estaré respondiendo.</p>`;
-
-    // Reset del formulario
+    // Si pasa la validación
+    // Mostrar modal de éxito
+    const modalExito = new bootstrap.Modal(document.getElementById("modalExito"));
+    modalExito.show();
     formulario.reset();
+
   });
+
+  // Modal con errores
+  function mostrarErrores(errores) {
+    const lista = document.getElementById("listaErrores");
+    lista.innerHTML = errores
+      .map(
+        (error) =>
+          `<li><i class="bi bi-x-circle me-2 text-danger"></i> ${error}</li>`
+      )
+      .join("");
+    const modal = new bootstrap.Modal(document.getElementById("modalErrores"));
+    modal.show();
+  }
+
+  // Capitalizar primeros nombres de los campos
+  function capitalizar(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 });

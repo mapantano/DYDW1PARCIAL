@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Materias 2025</title>
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet">
+
+        <!-- Estilos propios -->
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+
+        <!-- NAVBAR -->
+        <header class="bg-header p-3">
+            <nav
+                class="navbar navbar-expand-lg navbar-dark container position-relative">
+                <div
+                    class="d-flex w-100 align-items-center justify-content-between">
+                    <!-- Logo -->
+                    <a class="navbar-brand fw-bold text-white"
+                        href="index.html">
+                        Mi Cursada 2025 | UADE
+                    </a>
+
+                    <!-- Botón hamburguesa -->
+                    <button class="navbar-toggler ms-auto"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Abrir menú de navegación">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Botón modo claro/oscuro SIEMPRE visible -->
+                <div class="w-100 d-flex justify-content-end mt-2 d-lg-none">
+                    <button id="toggle-mode" class="btn btn-mode"
+                        aria-label="Cambiar modo">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+
+                <!-- Menú colapsable -->
+                <div
+                    class="collapse navbar-collapse justify-content-between align-items-center mt-2 mt-lg-0"
+                    id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link"
+                                href="avisos.html">Avisos</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="sobremi.html">Sobre mí</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="materias2025.html">Materias 2025</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                    <!-- Botón modo claro/oscuro en desktop -->
+                    <button id="toggle-mode-desktop"
+                        class="btn btn-mode d-none d-lg-inline-block ms-3"
+                        aria-label="Cambiar modo">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <main class="container my-5 flex-grow-1">
+            <h1 class="text-center mb-2 nombre-principal">Diseño y Desarrollo
+                Web</h1>
+            <p class="text-center subtitulo-materia">Licenciatura en Gestión IT
+                · UADE</p>
+
+            <div class="row g-4">
+                <!-- Columna izquierda -->
+                <div class="col-lg-4 d-flex flex-column gap-4">
+
+                    <section id="fechas" class="sombra-seccion p-4">
+                        <h2 class="titulo-materia-card">Fechas de Exámenes</h2>
+                        <ul class="list-unstyled">
+                            <li>25/04: Primer Parcial</li>
+                            <li>13/06: Segundo Parcial</li>
+                        </ul>
+                    </section>
+
+                    <section id="bibliografia" class="sombra-seccion p-4">
+                        <h2 class="titulo-materia-card">Bibliografía</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.w3.org/" target="_blank"
+                                    class="link-materia">Creación de páginas Web
+                                    - W3C</a></li>
+                            <li><a href="https://platform.html5.org/"
+                                    target="_blank" class="link-materia">HTML5
+                                    Platform</a></li>
+                            <li><a href="https://www.w3schools.com/"
+                                    target="_blank"
+                                    class="link-materia">W3Schools</a></li>
+                            <li><a
+                                    href="https://agenciaciscar.com/estructura-de-un-sitio-web/"
+                                    target="_blank"
+                                    class="link-materia">Estructura de un sitio
+                                    web</a></li>
+                            <li><a
+                                    href="https://www.publisuites.com/blog/arquitectura-de-la-informacion/"
+                                    target="_blank"
+                                    class="link-materia">Arquitectura de la
+                                    Información</a></li>
+                            <li><a
+                                    href="https://www.aluracursos.com/blog/github-pages"
+                                    target="_blank" class="link-materia">GitHub
+                                    Pages</a></li>
+                        </ul>
+                    </section>
+
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="col-lg-8">
+
+                    <section id="actividades" class="sombra-seccion p-4">
+                        <h2 class="titulo-materia-card">Actividades UVAs</h2>
+
+                        <!-- UVA 1 -->
+                        <h3 class="text-uva">UVA 1</h3>
+                        <ul class="list-unstyled d-flex flex-column gap-3">
+                            <li
+                                class="actividad-item d-flex justify-content-between align-items-center flex-wrap">
+                                Página "Sobre mí"
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a
+                                        href="https://mapantano.github.io/DYDWUADE/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        página</a>
+                                    <a
+                                        href="https://github.com/mapantano/DYDWUADE/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        repositorio</a>
+                                </div>
+                            </li>
+
+                            <li
+                                class="actividad-item d-flex justify-content-between align-items-center flex-wrap">
+                                Página de la Materia
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a
+                                        href="https://mapantano.github.io/dydwpaginademateria/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        página</a>
+                                    <a
+                                        href="https://github.com/mapantano/dydwpaginademateria/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        repositorio</a>
+                                </div>
+                            </li>
+
+                            <li
+                                class="actividad-item d-flex justify-content-between align-items-center flex-wrap">
+                                Ejercicio Integrador
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a
+                                        href="https://mapantano.github.io/DYDW1PARCIAL/index.html"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        página</a>
+                                    <a
+                                        href="https://github.com/mapantano/DYDW1PARCIAL/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        repositorio</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- UVA 2 -->
+                        <h3 class="text-uva">UVA 2</h3>
+                        <ul class="list-unstyled d-flex flex-column gap-3">
+                            <li
+                                class="actividad-item d-flex justify-content-between align-items-center flex-wrap">
+                                Star Wars
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a
+                                        href="https://mapantano.github.io/dydwstarwars/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        página</a>
+                                    <a
+                                        href="https://github.com/mapantano/dydwstarwars/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        repositorio</a>
+                                </div>
+                            </li>
+
+                            <li
+                                class="actividad-item d-flex justify-content-between align-items-center flex-wrap">
+                                Sitio Gimnasio
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a
+                                        href="https://mapantano.github.io/dydwgym/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        página</a>
+                                    <a
+                                        href="https://github.com/mapantano/dydwgym/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        repositorio</a>
+                                </div>
+                            </li>
+
+                            <li
+                                class="actividad-item d-flex justify-content-between align-items-center flex-wrap">
+                                Galería de Imágenes
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a
+                                        href="https://mapantano.github.io/dydwgaleria/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        página</a>
+                                    <a
+                                        href="https://github.com/mapantano/dydwgaleria/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        repositorio</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- UVA 3 -->
+                        <h3 class="text-uva">UVA 3</h3>
+                        <ul class="list-unstyled d-flex flex-column gap-3">
+                            <li
+                                class="actividad-item d-flex justify-content-between align-items-center flex-wrap">
+                                Ejercicio JavaScript
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a
+                                        href="https://mapantano.github.io/dydwEjercicioJavaScript/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        página</a>
+                                    <a
+                                        href="https://github.com/mapantano/dydwEjercicioJavaScript"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        repositorio</a>
+                                </div>
+                            </li>
+
+                            <li
+                                class="actividad-item d-flex justify-content-between align-items-center flex-wrap">
+                                Formulario JS
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a
+                                        href="https://mapantano.github.io/DYDW1PARCIAL/contacto.html"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        página</a>
+                                    <a
+                                        href="https://github.com/mapantano/DYDW1PARCIAL"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        repositorio</a>
+                                </div>
+                            </li>
+
+                            <li
+                                class="actividad-item d-flex justify-content-between align-items-center flex-wrap">
+                                Modo Claro / Oscuro
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a
+                                        href="https://mapantano.github.io/DYDW1PARCIAL/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        página</a>
+                                    <a
+                                        href="https://github.com/mapantano/DYDW1PARCIAL"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        repositorio</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- UVA 4 -->
+                        <h3 class="text-uva">UVA 3</h3>
+                        <ul class="list-unstyled d-flex flex-column gap-3">
+                            <li
+                                class="actividad-item d-flex justify-content-between align-items-center flex-wrap">
+                                Integracion GitHub y Netlify
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a
+                                        href="https://chistes-app.netlify.app/"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        página</a>
+                                    <a
+                                        href="https://github.com/mapantano/dydwEjercicioGitHub"
+                                        target="_blank"
+                                        class="btn btn-actividad">Ver
+                                        repositorio</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </section>
+
+                </div>
+            </div>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-footer text-white text-center p-3 mt-auto">
+            <p>Hecho con &#10084; por María Alejandra Pantano</p>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- JS -->
+        <script src="./js/modo.js"></script>
+
+    </body>
+</html>

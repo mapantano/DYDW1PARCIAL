@@ -1,28 +1,35 @@
-const toggleButton = document.getElementById("toggle-mode");
-const icon = toggleButton.querySelector("i");
+const botonesModo = document.querySelectorAll("#toggle-mode, #toggle-mode-desktop");
 
-// Función para aplicar el modo elegido en el resto de las páginas
 function aplicarModoGuardado() {
   const modoGuardado = localStorage.getItem("modo");
   if (modoGuardado === "oscuro") {
     document.body.classList.add("modo-oscuro");
-    icon.classList.remove("bi-moon-fill");
-    icon.classList.add("bi-sun-fill");
+    botonesModo.forEach(boton => {
+      const icon = boton.querySelector("i");
+      icon.classList.remove("bi-moon-fill");
+      icon.classList.add("bi-sun-fill");
+    });
   }
 }
 
 aplicarModoGuardado();
 
-toggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("modo-oscuro");
+botonesModo.forEach(boton => {
+  boton.addEventListener("click", () => {
+    document.body.classList.toggle("modo-oscuro");
+    const esOscuro = document.body.classList.contains("modo-oscuro");
 
-  if (document.body.classList.contains("modo-oscuro")) {
-    icon.classList.remove("bi-moon-fill");
-    icon.classList.add("bi-sun-fill");
-    localStorage.setItem("modo", "oscuro");
-  } else {
-    icon.classList.remove("bi-sun-fill");
-    icon.classList.add("bi-moon-fill");
-    localStorage.setItem("modo", "claro");
-  }
+    botonesModo.forEach(b => {
+      const icon = b.querySelector("i");
+      if (esOscuro) {
+        icon.classList.remove("bi-moon-fill");
+        icon.classList.add("bi-sun-fill");
+        localStorage.setItem("modo", "oscuro");
+      } else {
+        icon.classList.remove("bi-sun-fill");
+        icon.classList.add("bi-moon-fill");
+        localStorage.setItem("modo", "claro");
+      }
+    });
+  });
 });
